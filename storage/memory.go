@@ -74,7 +74,7 @@ func (m *Memory) GetByID(ID int) (model.Person, error) {
 func (m *Memory) GetAll() (model.Persons, error) {
 	var result model.Persons
 	for _, v := range m.Persons {
-		result = append(result, v)
+		result = append(result, &v)
 	}
 
 	return result, nil
